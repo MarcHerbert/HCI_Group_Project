@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#home">Home</a>
+  <button class="dropdown-btn">Diseases 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Alzheimer</a>
+    <a href="#">Asthma</a>
+    <a href="#">Cancer</a>
+  </div>
+  <a href="#news">News</a>
+</div>
+
+<div class="main">
+        <label id="title">Non-communicable Diseases</label>
+        <p id="intro">A non-communicable disease (NCD) is a disease that is not transmissible directly from one person to another. 
+            NCDs include Parkinson's disease, autoimmune diseases, strokes, most heart diseases, most cancers, diabetes, chronic kidney disease, osteoarthritis, osteoporosis, Alzheimer's disease, cataracts, and others. 
+            NCDs may be chronic or acute. Most are non-infectious, although there are some non-communicable infectious diseases, such as parasitic diseases in which the parasite's life cycle does not include direct host-to-host transmission.</p>
+        <br>
+        <!--<hr width="100%">--> 
+        <label id="title">Risk Factors</label>
+        <p id="intro">Risk factors such as a person's background; lifestyle and environment are known to increase the likelihood of certain non-communicable diseases. 
+            They include age, gender, genetics, exposure to air pollution, and behaviors such as smoking, unhealthy diet and physical inactivity which can lead to hypertension and obesity, in turn leading to increased risk of many NCDs. 
+            Most NCDs are considered preventable because they are caused by modifiable risk factors.
+        </p>
+        <hr width="100%"> 
+        <label id="title">Categories of Diseases</label>
+        <button id="more"><a href="#diseases">Show more>></a></button>
+        <div id="images">
+            <img id="img" src="Cancer.jpg" alt="Cancer">
+            <img id="img" src="alzheimers.png" alt="Alzheimer">
+            <img id="img" src="asthma.png" alt="Asthma">
+        </div>
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html> 
