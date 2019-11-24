@@ -6,35 +6,32 @@
 <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-
-<div class="sidenav">
-  <a href="#home">Home</a>
-  <button class="dropdown-btn">Diseases 
+  <div id="modal" onclick="nav()"></div>
+  <ul>
+    <button id="openbtn" class="openbtn" onclick="nav()">☰</button>
+    <label id="title2">Cancer</label>
+  </ul>
+<div id="sidebar" class="sidenav">
+  <a id="navText" href="#home">Home</a>
+  <button id="navText" class="dropdown-btn">Diseases 
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Alzheimer</a>
-    <a href="#">Asthma</a>
-    <a href="#">Cancer</a>
+    <a id="navText" href="#">Alzheimer</a>
+    <a id="navText" href="#">Asthma</a>
+    <a id="navText" href="#">Cancer</a>
   </div>
-  <a href="#news">News</a>
+  <a id="navText" href="#news">News</a>
 </div>
-
-<div class="main">
-        <label id="title2">Cancer</label>
-        <hr width="100%"> 
-        <p class="intro" >Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body.
-         These contrast with benign tumors, which do not spread. Possible signs and symptoms include a lump, abnormal bleeding, prolonged cough, unexplained weight loss, and a change in bowel movements.
-         While these symptoms may indicate cancer, they can also have other causes. Over 100 types of cancers affect humans.</p>
-        <div id="images">
-            <canvas id="myCanvas" style="border:1px solid #000000;"></canvas>
-        </div>
-</div>
+<div id="main" class="main"> 
+  
+  </div>
 
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
+var open=true;
 
 for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function() {
@@ -47,6 +44,24 @@ for (i = 0; i < dropdown.length; i++) {
   }
   });
 }
+
+function nav() {
+  if(open){
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("modal").style.visibility= "visible";
+  document.getElementById("openbtn").style.marginLeft="250px";
+  open=false;
+  }else{
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("modal").style.visibility = "hidden";
+  document.getElementById("openbtn").style.marginLeft="0";
+  open=true;
+  }
+  //document.getElementById("modal").style.opacity = "0.5";
+}
+
 </script>
 
 </body>
