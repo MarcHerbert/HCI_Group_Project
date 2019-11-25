@@ -259,8 +259,8 @@ text-align: center;
 }
 
 div#container {
-width: 1000px;
-height: 600px;
+  height: 483px;
+  width: 1068px;
 margin: auto;
 background-color: #2F4A6D;
 }

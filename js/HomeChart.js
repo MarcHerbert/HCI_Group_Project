@@ -41,8 +41,8 @@ const svg = d3.select('svg');
 const svgContainer = d3.select('#container');
 
 const margin = 80;
-const width = 1000- 2 * margin;
-const height = 600- 2 * margin;
+const width = 1065- 2 * margin;
+const height = 483- 2 * margin;
 
 const chart = svg.append('g')
   .attr('transform', `translate(${margin}, ${margin})`);
