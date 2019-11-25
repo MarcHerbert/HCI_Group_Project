@@ -2,37 +2,37 @@
 const sample = [
   {
     language: 'Asthma',
-    value: 30,
+    value: 7.7,
     color: '#000000'
   },
   {
     language: 'Alzheirmers',
-    value: 31,
+    value: 24.3,
     color: '#00a2ee'
   },
   {
     language: 'Cancer',
-    value: 40,
+    value: 38.4,
     color: '#fbcb39'
   },
   {
     language: 'Cardiovascular disease',
-    value: 20,
+    value: 48,
     color: '#007bc8'
   },
   {
     language: 'Diabetes',
-    value: 25,
+    value: 9.4,
     color: '#65cedb'
   },
   {
     language: 'kidney disease',
-    value: 10,
+    value: 15,
     color: '#ff6e52'
   },
   {
     language: 'respiratory disease',
-    value: 12,
+    value: 5,
     color: '#f9de3f'
   }
 ];
