@@ -13,7 +13,7 @@
     <label id="title2">Cancer</label>
   </ul>
 <div id="sidebar" class="sidenav">
-  <a id="navText" href="#home">Home</a>
+  <a id="navText" href="homepage.html">Home</a>
   <button id="navText" class="dropdown-btn">Diseases 
     <i class="fa fa-caret-down"></i>
   </button>
@@ -22,7 +22,7 @@
     <a id="navText" href="#">Asthma</a>
     <a id="navText" href="#">Cancer</a>
   </div>
-  <a id="navText" href="#news">News</a>
+  <a id="navText" href="news.html">News</a>
 </div>
 <div id="main" class="main"> 
   <div class="w3-container">
@@ -78,13 +78,11 @@ for (i = 0; i < dropdown.length; i++) {
 function nav() {
   if(open){
   document.getElementById("sidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
   document.getElementById("modal").style.visibility= "visible";
   document.getElementById("openbtn").style.marginLeft="250px";
   open=false;
   }else{
   document.getElementById("sidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
   document.getElementById("modal").style.visibility = "hidden";
   document.getElementById("openbtn").style.marginLeft="0";
   open=true;

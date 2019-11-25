@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="homepage.css">
+<link rel="stylesheet" href="news.css">
+</head>
+<body>
+  <div id="modal" onclick="nav()"></div>
+  <ul>
+    <button id="openbtn" class="openbtn" onclick="nav()">☰</button>
+    <label id="title2">News</label>
+  </ul>
+<div id="sidebar" class="sidenav">
+  <a id="navText" href="homepage.html">Home</a>
+  <button id="navText" class="dropdown-btn">Diseases 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a id="navText" href="#">Alzheimer</a>
+    <a id="navText" href="#">Asthma</a>
+    <a id="navText" href="Cancer.html">Cancer</a>
+  </div>
+  <a id="navText" href="news.html">News</a>
+</div>
+<div id="main" class="main">
+    <h2 style="margin-top: 5%;">Useful links:</h2>
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>World Health Organization</h3>
+            <a href="https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases">https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases</a>
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <h3>Wikipedia</h3>
+            <a href="https://en.wikipedia.org/wiki/Non-communicable_disease">https://en.wikipedia.org/wiki/Non-communicable_disease</a>
+            <p></p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h3>PSI</h3>
+            <a href="https://www.psi.org/health-area/non-communicable-diseases/#about">https://www.psi.org/health-area/non-communicable-diseases/#about</a>
+            <p></p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h3>Healthline</h3>
+            <a href="https://www.healthline.com/health/non-communicable-diseases-list">https://www.healthline.com/health/non-communicable-diseases-list</a>
+            <p></p>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+              <h3>BBC</h3>
+              <a href="https://www.bbc.co.uk/bitesize/guides/z3t4xfr/revision/1">https://www.bbc.co.uk/bitesize/guides/z3t4xfr/revision/1</a>
+              <p></p>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <h3>Unicef</h3>
+              <a href="https://www.unicef.org/health/non-communicable-diseases">https://www.unicef.org/health/non-communicable-diseases</a>
+              <p></p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              <h3>BMJ</h3>
+              <a href="https://www.bmj.com/content/364/bmj.l251">https://www.bmj.com/content/364/bmj.l251</a>
+              <p></p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              <h3>Physio Pedia</h3>
+              <a href="https://www.physio-pedia.com/Non-Communicable_Diseases">https://www.physio-pedia.com/Non-Communicable_Diseases</a>
+              <p></p>
+            </div>
+          </div>
+      </div>
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+var open=true;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+function nav() {
+  if(open){
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("modal").style.visibility= "visible";
+  document.getElementById("openbtn").style.marginLeft="250px";
+  open=false;
+  }else{
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("modal").style.visibility = "hidden";
+  document.getElementById("openbtn").style.marginLeft="0";
+  open=true;
+  }
+  //document.getElementById("modal").style.opacity = "0.5";
+}
+</script>
+
+</body>
+</html> 
