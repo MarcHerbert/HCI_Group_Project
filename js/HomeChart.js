@@ -1,54 +1,39 @@
 // https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-languages
 const sample = [
   {
-    language: 'Rust',
-    value: 78.9,
+    language: 'Asthma',
+    value: 30,
     color: '#000000'
   },
   {
-    language: 'Kotlin',
-    value: 75.1,
+    language: 'Alzheirmers',
+    value: 31,
     color: '#00a2ee'
   },
   {
-    language: 'Python',
-    value: 68.0,
+    language: 'Cancer',
+    value: 40,
     color: '#fbcb39'
   },
   {
-    language: 'TypeScript',
-    value: 67.0,
+    language: 'Cardiovascular disease',
+    value: 20,
     color: '#007bc8'
   },
   {
-    language: 'Go',
-    value: 65.6,
+    language: 'Diabetes',
+    value: 25,
     color: '#65cedb'
   },
   {
-    language: 'Swift',
-    value: 65.1,
+    language: 'kidney disease',
+    value: 10,
     color: '#ff6e52'
   },
   {
-    language: 'JavaScript',
-    value: 61.9,
+    language: 'respiratory disease',
+    value: 12,
     color: '#f9de3f'
-  },
-  {
-    language: 'C#',
-    value: 60.4,
-    color: '#5d2f8e'
-  },
-  {
-    language: 'F#',
-    value: 59.6,
-    color: '#008fc9'
-  },
-  {
-    language: 'Clojure',
-    value: 59.6,
-    color: '#507dca'
   }
 ];
 
@@ -56,8 +41,8 @@ const svg = d3.select('svg');
 const svgContainer = d3.select('#container');
 
 const margin = 80;
-const width = 100 - 2 * margin;
-const height = 60 - 2 * margin;
+const width = 1000- 2 * margin;
+const height = 600- 2 * margin;
 
 const chart = svg.append('g')
   .attr('transform', `translate(${margin}, ${margin})`);
@@ -69,7 +54,7 @@ const xScale = d3.scaleBand()
 
 const yScale = d3.scaleLinear()
   .range([height, 0])
-  .domain([0, 100]);
+  .domain([0, 50]);
 
 // vertical grid lines
 // const makeXLines = () => d3.axisBottom()
@@ -180,25 +165,20 @@ svg
   .attr('y', margin / 2.4)
   .attr('transform', 'rotate(-90)')
   .attr('text-anchor', 'middle')
-  .text('Love meter (%)')
+  .text('Percentage of Population affected (%)')
 
 svg.append('text')
   .attr('class', 'label')
   .attr('x', width / 2 + margin)
   .attr('y', height + margin * 1.7)
   .attr('text-anchor', 'middle')
-  .text('Languages')
+  .text('Diseases')
 
 svg.append('text')
   .attr('class', 'title')
   .attr('x', width / 2 + margin)
   .attr('y', 40)
   .attr('text-anchor', 'middle')
-  .text('Most loved programming languages in 2018')
+  .text('Non-Communicable Diseases')
 
-svg.append('text')
-  .attr('class', 'source')
-  .attr('x', width - margin / 2)
-  .attr('y', height + margin * 1.7)
-  .attr('text-anchor', 'start')
-  .text('Source: Stack Overflow, 2018')
+
