@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
@@ -32,9 +33,18 @@
             NCDs may be chronic or acute. Most are non-infectious, although there are some non-communicable infectious diseases, such as parasitic diseases in which the parasite's life cycle does not include direct host-to-host transmission.</p>
     </div>
     <div class="graph">
-        <canvas class="myCanvas" style="border:1px solid #000000;">
+        
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+
+          <!-- <h2>Bar chart example</h2> -->
+          <div id='container'>
+            <svg></svg>
+          </div>
+
+          <script type="text/javascript" src="js/HomeChart.js"></script>
+        
         <!--Put here the graph-->
-        </canvas>
+        
     </div>
   </div>
             <div class="bottom"> 
