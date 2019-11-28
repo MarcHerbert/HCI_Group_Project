@@ -1,6 +1,6 @@
-var margina = {top: 10, right: 30, bottom: 30, left: 60},
-    widtha = 1000 - margina.left - margina.right,
-    heighta = 600 - margina.top - margina.bottom;
+var margina = {top: 30, right: 30, bottom: 30, left: 60},
+    widtha = 800 - margina.left - margina.right,
+    heighta = 500 - margina.top - margina.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -28,14 +28,18 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
       .range([ 0, widtha ]);
     xAxis = svg.append("g")
       .attr("transform", "translate(0," + heighta + ")")
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(x))
+      .selectAll("text")
+        .style("fill", "Black");
 
     // Add Y axis
     var y = d3.scaleLinear()
       .domain([0, d3.max(data, function(d) { return +d.value; })])
       .range([ heighta, 0 ]);
     yAxis = svg.append("g")
-      .call(d3.axisLeft(y));
+      .call(d3.axisLeft(y))
+      .selectAll("text")
+        .style("fill", "Black");
 
     // Add a clipPath: everything out of this area won't be drawn.
     var clip = svg.append("defs").append("svg:clipPath")
@@ -114,5 +118,31 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
         .transition()
         .attr("d", areaGenerator)
     });
+
+    svg
+    .append('text')
+    .attr('class', 'label')
+    .attr('x', -(heighta / 2) )
+    .attr('y', -50)
+    .attr('transform', 'rotate(-90)')
+    .attr('text-anchor', 'middle')
+    .text('People Diagnosed with Cancer')
+    .style("fill", "Black")
+  
+  svg.append('text')
+    .attr('class', 'label')
+    .attr('x', widtha / 2)
+    .attr('y', 500)
+    .attr('text-anchor', 'middle')
+    .text('Year')
+    .style("fill", "Black")
+  
+  svg.append('text')
+    .attr('class', 'title')
+    .attr('x', widtha / 2 )
+    .attr('y', 0)
+    .attr('text-anchor', 'middle')
+    .text('Cancer Diagnoses over time')
+    .style("fill", "Black")
 
 })
