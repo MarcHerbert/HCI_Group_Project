@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="homepage.css">
+<link rel="stylesheet" href="cancer.css">
 </head>
 <body>
   <div id="modal" onclick="nav()"></div>
@@ -43,29 +44,58 @@
         <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Graph 2</div>
       </a>
       <a href="javascript:void(0)" onclick="openGraph(event, 'graph3');">
-        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Graph 3</div>
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Useful Information</div>
       </a>
     </div>
   
     <div id="graph1" class="w3-container graph">
+      <div class="graphCon">
       <h2>Graph 1</h2>
       <script src="https://d3js.org/d3.v4.js"></script>
       <div id="my_dataviz"></div>
 
       <script type="text/javascript" src="js/areaChart.js"></script>
     </div>
+        <div class="card">
+            <h3>Cancer diagnoses over time</h3>
+          <p>&#x2022; 2014: 1603 people diagnosed</p>
+          <p>&#x2022; 2015: 710 people diagnosed</p>
+          <p>&#x2022; 2016: 1004 people diagnosed</p>
+          <p>&#x2022; 2017: 1700 people diagnosed</p>
+          <p>&#x2022; 2018: 20000 people diagnosed</p>
+          <p></p>
+      </div>
+      </div>
   
     <div id="graph2" class="w3-container graph" style="display:none">
+      <div class="graphCon">
       <h2>Graph 2</h2>
       <div id="my_dataviz2"></div>
 
       <script type="text/javascript" src="js/BarChartCancer.js"></script>
+      </div>
+      <div class="card">
+          <h3>Cancer diagnoses over time</h3>
+          <p>&#x2022; United States is the country with the most cancer diognosis</p>
+          <p></p>
+          <p>&#x2022; Italy is the country with the less cancer diognosis</p>
+          <p></p>
+          <p>&#x2022; There is an average of 3000 diognosed people in all countries</p>
+    </div>
     </div>
   
     <div id="graph3" class="w3-container graph" style="display:none">
-      <h2>Graph 3</h2>
-      <p>Add Graph here.</p>
-    </div>
+        <div class="graphCon">
+        <div class="card1">
+            <h3>Cancer</h3>
+            <p>&#x2022; Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body. These contrast with benign tumors, which do not spread. Possible signs and symptoms include a lump, abnormal bleeding, prolonged cough, unexplained weight loss, and a change in bowel movements. While these symptoms may indicate cancer, they can also have other causes. Over 100 types of cancers affect humans.</p>
+            <p>&#x2022; The majority of cancers, some 90–95% of cases, are due to genetic mutations from environmental and lifestyle factors. The remaining 5–10% are due to inherited genetics. Environmental refers to any cause that is not inherited genetically, such as lifestyle, economic, and behavioral factors and not merely pollution. Common environmental factors that contribute to cancer death include tobacco (25–30%), diet and obesity (30–35%), infections (15–20%), radiation (both ionizing and non-ionizing, up to 10%), lack of physical activity, and pollution. Psychological stress does not appear to be a risk factor for the onset of cancer, though it may worsen outcomes in those who already have cancer.</p>
+          </div>
+        </div>
+    <div class="card">
+        <img style="height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Symptoms_of_cancer_metastasis.svg/580px-Symptoms_of_cancer_metastasis.svg.png"/>
+  </div>
+  </div>
   </div>
   </div>
 
