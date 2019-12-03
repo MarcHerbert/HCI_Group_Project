@@ -12,7 +12,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margina.left + "," + margina.top + ")");
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+d3.csv("https://raw.githubusercontent.com/MarcHerbert/csv/master/AreaChartNew.csv",
 
   // When reading the csv, I must format variables:
   function(d){
@@ -35,7 +35,8 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
     // Add Y axis
     var y = d3.scaleLinear()
       .domain([0, d3.max(data, function(d) { return +d.value; })])
-      .range([ heighta, 0 ]);
+      .range([heighta, 0 ])
+      .domain([1350, 1800]);
     yAxis = svg.append("g")
       .call(d3.axisLeft(y))
       .selectAll("text")
@@ -126,7 +127,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
     .attr('y', -50)
     .attr('transform', 'rotate(-90)')
     .attr('text-anchor', 'middle')
-    .text('People Diagnosed with Cancer')
+    .text('Cancer Diagnosis per 1000 people')
     .style("fill", "Black")
   
   svg.append('text')
@@ -142,7 +143,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
     .attr('x', widtha / 2 )
     .attr('y', 0)
     .attr('text-anchor', 'middle')
-    .text('Cancer Diagnoses over time')
+    .text('Cancer Diagnoses over time in the USA')
     .style("fill", "Black")
 
 })
