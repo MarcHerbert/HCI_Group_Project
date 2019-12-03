@@ -12,7 +12,7 @@ var svg2 = d3.select("#my_dataviz2")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/MarcHerbert/csv/master/BarChartCancer.csv", function(data) {
 
 // X axis
 var x = d3.scaleBand()
@@ -33,7 +33,7 @@ svg2.append("g")
 // Add Y axis
 var y = d3.scaleLinear()
   .range([height, 0])
-  .domain([0, 13000]);
+  .domain([0, 500]);
 svg2.append("g")
   .call(d3.axisLeft(y))
   .selectAll("text")
@@ -66,7 +66,7 @@ svg2.selectAll("mybar")
     .attr('y', -50)
     .attr('transform', 'rotate(-90)')
     .attr('text-anchor', 'middle')
-    .text('People Diagnosed with Cancer')
+    .text('Age-Standardised cancer diagnosis per 100,000')
     .style("fill", "Black")
   
   svg2.append('text')
