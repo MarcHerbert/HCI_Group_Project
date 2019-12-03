@@ -33,7 +33,7 @@ svg2.append("g")
 // Add Y axis
 var y = d3.scaleLinear()
   .range([height, 0])
-  .domain([0, 500]);
+  .domain([200, 500]);
 svg2.append("g")
   .call(d3.axisLeft(y))
   .selectAll("text")
