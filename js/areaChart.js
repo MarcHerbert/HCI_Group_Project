@@ -70,10 +70,10 @@ d3.csv("https://raw.githubusercontent.com/MarcHerbert/csv/master/AreaChartNew.cs
     area.append("path")
       .datum(data)
       .attr("class", "myArea")  // I add the class myArea to be able to modify it later on.
-      .attr("fill", "#69b3a2")
-      .attr("fill-opacity", .6)
+      .attr("fill", "#5588EE")
+      .attr("fill-opacity", .7)
       .attr("stroke", "black")
-      .attr("stroke-width", 2)
+      .attr("stroke-width", 3)
       .attr("d", areaGenerator )
 
     // Add the brushing

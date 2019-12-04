@@ -33,7 +33,7 @@ svg2.append("g")
 // Add Y axis
 var y = d3.scaleLinear()
   .range([height, 0])
-  .domain([200, 500]);
+  .domain([0, 500]);
 svg2.append("g")
   .call(d3.axisLeft(y))
   .selectAll("text")
@@ -57,7 +57,8 @@ svg2.selectAll("mybar")
     .attr("y", function(d) { return y(d.Value); })
     .attr("width", x.bandwidth())
     .attr("height", function(d) { return height - y(d.Value); })
-    .attr("fill", "#69b3a2")
+    .attr("stroke", "black")
+    .attr("fill", "#5588EE")
 
     svg2
     .append('text')
