@@ -11,27 +11,32 @@ const sample = [
     color: '#00a2ee'
   },
   {
-    language: 'Cancer',
-    value: 38.4,
-    color: '#fbcb39'
-  },
-  {
-    language: 'Cardiovascular disease',
-    value: 48,
-    color: '#007bc8'
-  },
-  {
     language: 'Diabetes',
     value: 9.4,
     color: '#65cedb'
   },
   {
-    language: 'kidney disease',
+    language: 'Cardiovascular Disease',
+    value: 48,
+    color: '#007bc8'
+  },
+  {
+    language: 'Cancer',
+    value: 38.4,
+    color: '#fbcb39'
+  },
+  {
+    language: 'Kidney Disease',
     value: 15,
     color: '#ff6e52'
   },
   {
-    language: 'respiratory disease',
+    language: 'Cataracts',
+    value: 34,
+    color: '#f9de3f'
+  },
+  {
+    language: 'Respiratory Disease',
     value: 5,
     color: '#f9de3f'
   }
