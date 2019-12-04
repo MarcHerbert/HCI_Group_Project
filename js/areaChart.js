@@ -71,7 +71,7 @@ d3.csv("https://raw.githubusercontent.com/MarcHerbert/csv/master/AreaChartNew.cs
       .datum(data)
       .attr("class", "myArea")  // I add the class myArea to be able to modify it later on.
       .attr("fill", "#5588EE")
-      .attr("fill-opacity", .7)
+      .attr("fill-opacity", .6)
       .attr("stroke", "black")
       .attr("stroke-width", 3)
       .attr("d", areaGenerator )
